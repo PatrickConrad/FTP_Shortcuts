@@ -6,6 +6,7 @@ This package requires an existing FTP account.
 
 Environment variables are required for the following keys.
 
+- PORT
 - FTP_HOST
 - FTP_USER
 - FTP_PASSWORD
