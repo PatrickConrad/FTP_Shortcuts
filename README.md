@@ -9,3 +9,7 @@
 - FTP_USER
 - FTP_PASSWORD
 - FTP_PORT
+
+#### Dependencies
+
+- Basic FTP
