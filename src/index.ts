@@ -86,24 +86,16 @@ export const downloadFromFTP = async(ftpPath: string, saveFilePath: string, star
     const starter = startAt==null?0:startAt
     await client.downloadTo(saveFilePath, ftpPath, starter);
     await client.close()
-
-
 }
 
 
 export const saveToFTP = async(srcFilePath: string, saveFilePath: string, remove: boolean) => {
     const client = await connectToFTP();
     await client.uploadFrom(srcFilePath, saveFilePath);
-    // console.log("UPLOADING")
-    // console.log({ftpResp});
-    // const resCode = `${ftpResp.code}`.substring(0,1);
-    // const badStarts = ['4', '5'];
     if(remove){
         fs.rmSync(srcFilePath)
     }
     await client.close()
-
-
 }
 
 
@@ -128,7 +120,5 @@ export const saveMultipleFilesToFTP = async(srcFilePath: string, saveFilePath: s
     catch(err: any){
         console.log('err');
     }
-   
-   
 }
 
